@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="HTML Form">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Brian G.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>HTML Form</title>
+</head>
+<body>
+  <h2>The Form</h2>
+  <br>
+  <div>
+    <form id="regForm" action="">
+      <!-- Page 1-->
+      <div class="tab" id="p1">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\+.+[a-zA-Z0-9-]+)*$/" placeholder="example@email.com" required>
+      </div>
+      
+      <!-- Page 2-->
+      <div class="tab" id="p2">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+        <label>Gender</label>
+        <label class="container">Male
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Female
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Choose not to answer
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+        </label>
+      </div>
+      
+      <!-- Page 3 -->
+      <div class="tab" id="p3">
+        <label for="uname">Create a Username</label>
+        <input type="text" id="uname" name="uname" placeholder="Username">
+        <label for="pword">Create a Password</label>
+        <input type="text" id="pword" name="pword" placeholder="Password">
+        <label for="cpword">Confirm Password</label>
+        <input type="text" id="cpword" name="cpword" placeholder="Confirm Password">
+      </div>
+      
+      <div>
+        <button type="button" id="back" onclick="nextPrev(-1)">Back</button>
+        <button type="button" id="next" onclick="nextPrev(1)">Next</button>
+      </div>
+      
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+  </div>
+  
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
